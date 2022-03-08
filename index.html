@@ -10,12 +10,15 @@
 </head>
 <body>
 <script>
-var searchParams = new URLSearchParams(window.location.search)
+var searchParams = new URLSearchParams(window.location.search);
 var title = searchParams.get('title');
 var text = searchParams.get('text');
 var photo = searchParams.get('photo');
 var new_photo = photo.replace("$", "&");  
 
+  console.log(title);
+  console.log(text);
+  
 $("meta[name='og:title']").attr("content", title);
 $("meta[name='og:description']").attr("content", text);
 $("meta[name='og:image']").attr("content", new_photo);
