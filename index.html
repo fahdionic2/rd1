@@ -24,9 +24,9 @@ var new_photo = photo.replace("$", "&");
   console.log(title);
   console.log(text);
   
-$("meta[name='og:title']").attr("content", title);
-$("meta[name='og:description']").attr("content", text);
-$("meta[name='og:image']").attr("content", new_photo);
+$("meta[property='og:title']").attr("content", title);
+$("meta[property='og:description']").attr("content", text);
+$("meta[property='og:image']").attr("content", new_photo);
   
 window.location.replace(rdr);
     
