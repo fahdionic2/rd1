@@ -13,8 +13,11 @@
 <body>
 <script>
 var searchParams = new URLSearchParams(window.location.search);
+  
+  if(searchParams.has('photo')){
 var title = searchParams.get('title');
 var text = searchParams.get('text');
+var rdr = searchParams.get('rdr');    
 var photo = searchParams.get('photo');
 var new_photo = photo.replace("$", "&");  
 
@@ -26,6 +29,8 @@ $("meta[name='og:description']").attr("content", text);
 $("meta[name='og:image']").attr("content", new_photo);
   
 //window.location.replace("<?php echo $rdr; ?>");
+    
+  }
 </script>
 </body>
 </html>
