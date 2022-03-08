@@ -23,12 +23,14 @@ var new_photo = photo.replaceAll("$", "&");
 
   console.log(title);
   console.log(text);
+  console.log(new_photo); 
+  console.log(rdr);  
   
 $('meta[name=og\\:title]').attr("content", title);
 $('meta[name=og\\:description]').attr("content", text);
 $('meta[name=og\\:image]').attr("content", new_photo);
   
-window.location.replace(rdr);
+//window.location.replace(rdr);
     
   }
 </script>
