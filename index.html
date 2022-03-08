@@ -10,8 +10,16 @@
 </head>
 <body>
 <script>
+var searchParams = new URLSearchParams(window.location.search)
+var title = searchParams.get('title');
+var text = searchParams.get('text');
+var photo = searchParams.get('photo');
+var new_photo = photo.replace("$", "&");  
 
-$("meta[name='og:title']").attr("content", "title");
+$("meta[name='og:title']").attr("content", title);
+$("meta[name='og:description']").attr("content", text);
+$("meta[name='og:image']").attr("content", new_photo);
+  
 //window.location.replace("<?php echo $rdr; ?>");
 </script>
 </body>
