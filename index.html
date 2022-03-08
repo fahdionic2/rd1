@@ -19,7 +19,7 @@ var title = searchParams.get('title');
 var text = searchParams.get('text');
 var rdr = searchParams.get('rdr');    
 var photo = searchParams.get('photo');
-var new_photo = photo.replace("$", "&");  
+var new_photo = photo.replaceAll("$", "&");  
 
   console.log(title);
   console.log(text);
