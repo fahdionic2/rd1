@@ -25,11 +25,11 @@ var new_photo = photo.replaceAll("$", "&");
   console.log(text);
   console.log(new_photo); 
   console.log(rdr);  
-  
+  setTimeout(function() { 
 $('meta[name=og\\:title]').attr("content", title);
 $('meta[name=og\\:description]').attr("content", text);
 $('meta[name=og\\:image]').attr("content", new_photo);
-  
+  }, 1000);
 //window.location.replace(rdr);
     
   }
